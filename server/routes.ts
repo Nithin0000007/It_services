@@ -13,7 +13,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
+      console.log(validatedData,"<===validatedData")
       const submission = await storage.createContactSubmission(validatedData);
+      console.log(submission,"<===submission")
       
       // Send email notification in the background
       emailService.sendContactNotification(submission).catch((emailError) => {
