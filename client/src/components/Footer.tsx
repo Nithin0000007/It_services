@@ -170,9 +170,9 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <span>Built with</span>
+              <span>Built By</span>
               <span className="text-red-500">♥</span>
-              <span>for the future</span>
+              <span>Zenith Studio</span>
             </div>
           </div>
         </div>
