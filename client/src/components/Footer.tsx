@@ -171,7 +171,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
               <span>Built By</span>
-              <a className="text-red-500" href="https://www.zenithstudio.in" >Zenith Studio</a>
+              <a className="text-red-500" href="https://www.zenithstudio.in" target="_blank" >Zenith Studio</a>
             </div>
           </div>
         </div>
