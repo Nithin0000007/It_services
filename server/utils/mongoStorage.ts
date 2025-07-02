@@ -11,7 +11,7 @@ export class MongoStorage implements IStorage {
   private db: Db | null = null;
   private contactSubmissions: Collection<MongoContactSubmission> | null = null;
 
-  constructor(mongoUri: string = process.env.MONGODB_URI || 'mongodb://localhost:27017/rkads') {
+  constructor(mongoUri: string = process.env.MONGODB_URI) {
     this.client = new MongoClient(mongoUri);
   }
 
