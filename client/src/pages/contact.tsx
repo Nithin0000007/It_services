@@ -70,7 +70,7 @@ export default function Contact() {
       toast({
         title: "❌ Message Failed to Send",
         description:
-          "We encountered an issue sending your message. Please check your connection and try again, or contact us directly at rkads23@gmail.com",
+          "We encountered an issue sending your message. Please check your connection and try again, or contact us directly at hr@rkads.net",
         variant: "destructive",
         duration: 8000,
       });
