@@ -1,9 +1,19 @@
 import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
+import cors from "cors"; // ✅ import cors
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+const allowedOrigins = ['https://www.rkads.net'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
