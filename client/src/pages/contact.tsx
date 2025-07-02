@@ -106,7 +106,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      info: "rkads23@gmail.com",
+      info: "hr@rkads.net",
       color: "from-blue-500 to-purple-600",
     },
     {
