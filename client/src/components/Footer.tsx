@@ -117,7 +117,7 @@ export default function Footer() {
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-foreground font-medium break-words">
-                    rkads23@gmail.com
+                    hr@rkads.net
                   </p>
                   <p className="text-muted-foreground text-sm">
                     Business inquiries
