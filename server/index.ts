@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
-import cors from "cors"; // ✅ import cors
+import cors from "cors";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -12,7 +12,6 @@ app.use(cors({
   origin: allowedOrigins,
   credentials: true
 }));
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -47,6 +46,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// ✅ Add a simple GET API
+app.get('/', (_req: Request, res: Response) => {
+  res.json({ message: 'hello user' });
+});
+
 (async () => {
   const server = await registerRoutes(app);
 
@@ -58,10 +62,6 @@ app.use((req, res, next) => {
     throw err;
   });
 
-
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
   const port = 8000;
   server.listen(port, () => {
     log(`serving on port ${port}`);
